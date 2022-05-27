@@ -1,0 +1,43 @@
+\nonstopmode
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[ngerman]{babel}
+
+
+\usepackage{appendixnumberbeamer}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{xcolor}
+\usepackage{hyperref}
+
+\usepackage{biblatex}
+
+\usepackage{tikz}
+\usetikzlibrary{positioning,calc}
+
+\input{colors}
+
+% \usepackage{beamerthememetropolis}
+\usetheme[progressbar=frametitle]{metropolis}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\makeatletter
+\def\beamer@setupnote{%
+  \gdef\beamer@notesactions{%
+    \beamer@outsideframenote{%
+      \beamer@atbeginnote%
+      \beamer@notes%
+      \ifx\beamer@noteitems\@empty\else
+      \begin{itemize}\itemsep=0pt\parskip=0pt%
+        \beamer@noteitems%
+      \end{itemize}%
+      \fi%
+      \beamer@atendnote%
+    }%
+    \gdef\beamer@notesactions{}%
+  }
+}
+\makeatother
+
+\addbibresource{Ethik.bib}

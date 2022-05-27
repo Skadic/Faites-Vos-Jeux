@@ -1,0 +1,50 @@
+\begin{frame}{Finanzkrise}
+  \centering
+  
+  \note[item]<1-> {Gibt jetzt Probleme}
+  \note[item]<2-> {Finanzkrise vor 10 Jahren (zu dem Zeitpunkt) \begin{itemize}
+      \item Langsam sinken Einnahmen \begin{itemize}
+          \item App Stores (KLICK) $\Rightarrow$ Spieleportal von Entwicklern kaum genutzt
+          \item Werbeaufträge gehen zurück
+          \item Weniger In-Game Käufe
+      \end{itemize}
+      \item seit 3 Jahren nicht mehr genug
+      \item kann Mitarbeiter nicht mehr bezahlen
+  \end{itemize}}
+  \note[item]<4-> {AC-Games droht Bankrott}
+  
+  \begin{tikzpicture}
+    \node (walter) {\includegraphics[width=0.15\textwidth]{images/walter.png}};
+    \node[below=0mm of walter] (walter-name) {Walter};
+    
+    \node[left=3cm of walter] (acgames) {\includegraphics[width=0.15\textwidth]{images/ac_games.png}};
+    \node[below=0cm of acgames] (acgames-name) {AC-Games};
+    
+    \node[left=3cm of acgames] (nutzer) {\includegraphics[width=0.15\textwidth]{images/game_friends.png}};
+    \node[below=0cm of nutzer] (nutzer-name) {Nutzer:innen};
+    
+    
+    \draw<1-3>[-stealth] (walter) -- node[below] (ceo) {CEO}  (acgames);
+    \draw<1>[-stealth] (nutzer) -- node[below] (geld) {Geld} (acgames);
+    
+    % Finanzkrise 2
+    
+    \draw<2->[-stealth, red] (nutzer) -- node[below] (geld) {Geld} (acgames);
+    
+    \node<2->[above=1cm of geld] (finanzkrise) {\includegraphics[width=0.12\textwidth]{images/money_down.png}};
+    \node<2->[below=0cm of finanzkrise] (finanzkrise-name) {Finanzkrise};
+    \draw<2->[dotted, red] (finanzkrise-name) -- (geld);
+    
+    % App Stores machen obsolet 3
+    
+    \node<3->[below=0.5cm of geld] (apps) {\includegraphics[width=0.10\textwidth]{images/smartphone.png}};
+    \node<3->[below=0cm of apps] (apps-name) {App-Stores};
+    \draw<3->[dotted, red] (apps) -- (geld);
+    
+    % Bankrott
+    
+    \node<4->[left=2.7cm of walter] (batsu) {\includegraphics[width=0.2\textwidth]{images/batsu.png}};
+    \draw<4->[-stealth, red] ([yshift=1mm]acgames.east) -- node[above] {Droht Bankrott} ([yshift=1mm]walter.west);
+    \draw<4->[-stealth] ([yshift=-1mm]walter.west) -- node[below] (ceo) {CEO} ([yshift=-1mm]acgames.east);
+  \end{tikzpicture} 
+\end{frame}

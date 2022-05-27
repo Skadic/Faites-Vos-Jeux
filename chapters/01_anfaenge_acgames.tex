@@ -1,0 +1,38 @@
+\begin{frame}{Anfänge von AC-Games}
+  \centering
+  
+  \note[item]<1->{
+    Walter \begin{itemize}
+      \item Unternehmer seit fast 2 Jahrzehnten
+    \end{itemize}
+  }
+  \note[item]<2->{
+    Geschäftsführer Firma AC-Games \begin{itemize}
+      \item Betreibt kostenlose Spieleportal für Online-Spiele im Internet
+    \end{itemize} 
+  }
+  \note[item]<3->{ Relativ großer Kundenstamm \begin{itemize}
+      \item Finanzierung mit nur 100 aktivsten Spielern \begin{itemize}
+        \item Werbung
+        \item Kauf virtueller Gegenstände
+      \end{itemize}
+      \item Firma läuft gut
+      \item Aber wären ja nicht hier wenn nicht irgendwas schief geht
+    \end{itemize}
+  }
+  
+  \begin{tikzpicture}
+    \node<1-> (walter) {\includegraphics[width=0.15\textwidth]{images/walter.png}};
+    \node<1->[below=0mm of walter] (walter-name) {Walter};
+    
+    
+    \node<2->[left=3cm of walter] (acgames) {\includegraphics[width=0.15\textwidth]{images/ac_games.png}};
+    \node<2->[below=0cm of acgames] (acgames-name) {AC-Games};
+    
+    \node<3->[left=3cm of acgames] (nutzer) {\includegraphics[width=0.15\textwidth]{images/game_friends.png}};
+    \node<3->[below=0cm of nutzer] (nutzer-name) {Nutzer:innen};
+    
+    \draw<2->[-stealth] (walter) -- node[below] {CEO}  (acgames);
+    \draw<3->[-stealth] (nutzer) -- node[below] (geld) {Geld} (acgames);
+  \end{tikzpicture} 
+\end{frame}
