@@ -1,3 +1,8 @@
+% arara: lualatex: { synctex: yes, shell: yes } 
+% arara: biber if changed("bib")
+% arara: lualatex if changed("bib")
+%
+
 % % -*- coding:utf-8 -*-
 \documentclass[aspectratio=169,10pt, notes]{beamer}
 \input{preamble}
@@ -9,6 +14,9 @@
 \institute{TU Dortmund - Fakultät Informatik}
 \titlegraphic{\hfill\includegraphics[height=8mm]{tu-do-logo.pdf}}
 
+\includeonly{chapters/05_slotmachine}
+
+
 \begin{document}
 
 \maketitle
@@ -19,6 +27,7 @@
 
 \section{Faites Vos Jeux \cite{kees_faites_2017}}
 
+
 \note{\begin{itemize}
     \item Fallbeispiel aus Informatik Spektrum 2017
 \end{itemize}}
@@ -26,11 +35,13 @@
 \include{chapters/01_anfaenge_acgames}
 \include{chapters/02_finanzkrise}
 \include{chapters/03_angebot}
-\include{chapters/04_uebernahme}  
+\include{chapters/04_uebernahme}
+\include{chapters/05_slotmachine}
 
 \begin{frame}[t,standout]
 \Large
 Clever Last Words to Stimulate Discussion
+
 \end{frame}
 
 \nocite{kees_faites_2017}

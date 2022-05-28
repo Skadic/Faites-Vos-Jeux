@@ -1,0 +1,95 @@
+
+\begin{frame}{Die Ultimative Slot Machine}
+	\centering
+
+	\note[item] {Gehen zum Anfang der Firma zurück}
+	\note[item] {Am Anfang der Firma war Datenschutz keine hohe Priorität}
+	\note[item] {Alter Blog-Eintrag von Walter:}
+
+	\note<2->[item] {Beschreibt die "Ultimative Slot Machine" \begin{itemize}
+			\item Beschreibt Glücksspielmaschine, die sich dem Spieler anpasst
+			\item Dazu müssten Verhaltensdaten gesammelt werden
+		\end{itemize}
+	}
+	\note<2->[item] {Gab noch andere Ideen was mit den Daten möglich ist (nur intern) \begin{itemize}
+			\item Spieler künstlichem Stress aussetzen $\Rightarrow$ Wahl-/Kaufverhalten beeinflussen \begin{itemize}
+				      \item Unvorteilhafte Entscheidungen treffen
+			      \end{itemize}
+		\end{itemize}
+	}
+	\note<3->[item] {
+		Ideen wurden verworfen \begin{itemize}
+			\item Datenschutz wurde Walter wichtiger
+			\item Rechtlich nicht so einfach
+		\end{itemize}
+	}
+
+	\begin{tikzpicture}
+		\node<2-3> (slotmachine) {\includegraphics[width=0.50\textwidth]{images/gambling.png}};
+		\node<3> (batsu) {\includegraphics[width=0.50\textwidth]{images/batsu.png}};
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Die Ultimative Slot Machine}
+	\centering
+	\note[item]{Wäre alles Theorie $\Rightarrow$ alles gut}
+	\note<2>[item]{Stellt sich heraus: Diese Daten tatsächlich gesammelt}
+	\note<2>[item]{Systeme hätten umprogrammiert werden müssen}
+	\note<3>[item]{Kathleen: Überblick über Speicherung der Daten \begin{itemize}
+			\item Aber keine Ressoucen das zu beheben.
+		\end{itemize}}
+	\note<3>[item]{$\Rightarrow$ Speicherung der Daten setzte sich fort.}
+
+	\begin{tikzpicture}
+		\node<2-> (server) {\includegraphics[height=0.2\textwidth]{images/server.png}};
+		\node<2->[below = 0cm of server] (server-name) {Daten};
+		\node<3>[left = 3cm of server] (kathleen) {\includegraphics[height=0.2\textwidth]{images/kathleen.png}};
+		\node<3>[below = 0cm of kathleen] (kathleen-name) {Kathleen};
+
+		\draw<3>[-stealth] (kathleen) -- (server);
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Die Ultimative Slot Machine}
+	\centering
+
+	\note[item]{Datenschutzaudit macht auch darauf aufmerksam \begin{itemize}
+			\item auch wenn es (scheinbar) nach AGBs rechtens ist
+			\item Aber DSGVO: gesammelte Daten müssen bestimmten Zweck gewidmet sein. Sonst Sammlung unrechtens
+		\end{itemize}}
+	\note[item]{hat Data Broker auf AC-Games aufmerksam wurde \begin{itemize}
+			\item hat Interesse an den Verhaltensdaten der Nutzer
+		\end{itemize}
+	}
+	\note[item]{ Nicht mal AGB müssgen geändert werden \begin{itemize}
+			\item "Idealfall": Die Nutzer bekommen gar nichts mit
+		\end{itemize}
+	}
+
+	\begin{tikzpicture}
+		\node (inspector) {\includegraphics[width=0.25\textwidth]{images/inspector.png}};
+		\node<2->[above right=1.5cm and 1cm of inspector.center] (speech) {\includesvg[width=0.25\textwidth]{images/Speech_bubble}};
+		\node<2->[above right=-0.6cm and 0cm of speech.center, label={[align=center]Schon bisschen\\komisch...}] (komisch) {};
+
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Die Ultimative Slot Machine}
+	\centering
+
+	\note[item] {Pro \begin{itemize}
+			\item Sollte das komisch finden, dass Daten so lange gespeichert werden.
+			\item Ist die Einzige die einen Überblick über Datenerfassung hat
+		\end{itemize}}
+	\note[item]{Contra \begin{itemize}
+			\item Hatte nicht genug Ressourcen \begin{itemize}
+				      \item Vielleicht zu sehr mit anderen Dingen beschäftigt.
+				      \item Walter hätte eingreifen können. Sollte sich ein Bild davon machen.
+			      \end{itemize}
+		\end{itemize}}
+
+	\Large
+	Welche Verantwortung hatte Kathleen, die Datenerfassung zu hinterfragen, nachdem die Daten so lange nicht benutzt wurden?
+
+	\includegraphics[width=0.425\textwidth]{images/discussion.png}
+\end{frame}

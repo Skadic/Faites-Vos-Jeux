@@ -1,4 +1,55 @@
 
 \begin{frame}{Übernahme}
-    
+	\centering
+
+	\note[item] {
+		Resultat des Meetings: \visible<2->{\begin{itemize}
+				\item AC-Games wird verkauft
+			\end{itemize}}
+	}
+	\note<3->[item] {
+		Hauptgründe: \begin{itemize}
+			\item Einzig möglicher Weg
+			\item Gespeicherte Daten nicht allzu personenbezogen
+		\end{itemize}
+	}
+	\note<3->[item] {
+		Aber stimmt das auch?
+	}
+
+	\begin{tikzpicture}
+		\node<1-> (walter) {\includegraphics[width=0.15\textwidth]{images/walter.png}};
+		\node<1->[below=0mm of walter] (walter-name) {Walter};
+
+		\node<1->[right=4cm of walter] (databroker) {\includegraphics[width=0.15\textwidth]{images/data_broker.png}};
+		\node<1->[below=0cm of databroker] (databroker-name) {Data Broker GmbH};
+
+		% Wir verkaufen
+
+		\node<2>[above right=-18mm and 0cm of walter] (speech) {\includesvg[width=0.2\textwidth]{images/Speech_bubble}};
+		\node<2>[above right = -1mm and -11mm of speech.center] (verkauf) {Wir verkaufen!};
+
+		% Haben ja nur wenige daten
+
+		\node<3->[above right=-18mm and 0cm of walter] (speech) {\includesvg[width=0.25\textwidth]{images/thought_bubble}};
+		\node<3->[above right = -8mm and -1mm of speech.center, label={[align=center]Wir haben eh nur\\wenige Daten}] (wenig-daten) {};
+	\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Ein Angebot}
+	\centering
+
+	\note[item] {Pro \begin{itemize}
+			\item Kunden möchten vielleicht nicht, dass ihre Daten bei Data Broker landen \begin{itemize}
+				      \item Führt wahrscheinlich nichts sonderlich Gutes im Schilde
+			      \end{itemize}
+		\end{itemize}}
+	\note[item]{Contra \begin{itemize}
+			\item ???
+		\end{itemize}}
+
+	\Large
+	Welche moralische Verpflichtung hat Walter, seine Kundinnen und Kunden vor der Übernahme zu informieren?
+
+	\includegraphics[width=0.425\textwidth]{images/discussion.png}
 \end{frame}
