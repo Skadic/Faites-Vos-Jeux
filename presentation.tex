@@ -1,6 +1,6 @@
-% arara: xelatex: { synctex: yes, shell: yes } 
+% arara: lualatex: { synctex: yes, shell: yes } 
 % arara: biber if changed("bib")
-% arara: xelatex if changed("bib")
+% arara: lualatex if changed("bib")
 %
 
 % % -*- coding:utf-8 -*-
@@ -40,9 +40,11 @@
 \include{chapters/06_hank}
 \include{chapters/07_loesung}
 
-\nocite{kees_faites_2017}
-\nocite{lee_ethical_2016}
-\nocite{zankl_international_2014}
+\section{International Data Privacy Principles \cite{zankl_international_2014}}
+
+\include{chapters/08_international}
+
+\nocite{mifune}
 
 \begin{frame}{Literatur}
 \printbibliography[heading=none]
