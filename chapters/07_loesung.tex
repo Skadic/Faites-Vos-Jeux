@@ -1,0 +1,38 @@
+\begin{frame}{Suche nach einer Lösung}
+	\centering
+
+	\note[item] {Sollte Hank sich hier an die Auflagen halten?}
+	\note[item] {Möglichkeiten: \begin{itemize}
+			\item Walter etc. Bescheid sagen
+			\item Datenbank trotzdem bearbeiten und anonymisieren
+		\end{itemize}}
+
+	\Large
+	Was würdet ihr Hank raten?
+
+	\includegraphics[width=0.425\textwidth]{images/discussion.png}
+\end{frame}
+
+\begin{frame}{Suche nach einer Lösung}
+	\centering
+
+	\note[item]<1->{Entscheidung: Bearbeitung der Datenbank}
+	\note[item]<1->{Daten so aussehen lassen, als wären sie immer so erhoben worden.}
+	\note[item]<1->{Pseudonymisiert Kunden-IDs}
+
+	\note[item]<2->{Speichert Zuordnungstabelle auf privatem USB Stick}
+
+	\begin{tikzpicture}
+
+		\node (hank) {\includegraphics[width=0.15\textwidth]{images/hank_pc}};
+		\node[below=0cm of hank] (hank-name) {Hank};
+		\node<2>[above right=-8mm and -2mm of hank] (speech) {\includesvg[width=0.3\textwidth]{images/thought_bubble}};
+		\node<2>[above right=-5mm and -1mm of speech.center, label={[align=center]Ich anonymisiere\\die Datenbank.}] (eingreifen) {};
+
+    \node<3->[right = 4cm of hank] (usb) {\includegraphics[width=0.15\textwidth]{images/usb_memory_stick}};
+
+    \draw<3->[-stealth] (hank) -- node[above] {Zuordnungstabelle} (usb);
+
+	\end{tikzpicture}
+
+\end{frame}

@@ -69,27 +69,52 @@
 	\begin{tikzpicture}
 		\node (inspector) {\includegraphics[width=0.25\textwidth]{images/inspector.png}};
 		\node<2->[above right=1.5cm and 1cm of inspector.center] (speech) {\includesvg[width=0.25\textwidth]{images/Speech_bubble}};
-		\node<2->[above right=-0.6cm and 0cm of speech.center, label={[align=center]Schon bisschen\\komisch...}] (komisch) {};
-
+		\node<2>[above right=-0.6cm and 0cm of speech.center, label={[align=center]Schon bisschen\\komisch...}] (komisch) {};
+		\node<3>[above right=-0.6cm and 0cm of speech.center, label={[align=center]Aber passt}] (komisch) {};
 	\end{tikzpicture}
 \end{frame}
+
+% Frage: Verantwortung von Kathleen
+
+\begin{frame}{Die Ultimative Slot Machine}
+	\centering
+
+	\note[item] {Pro
+		\begin{itemize}
+			\item Sollte das komisch finden, dass Daten so lange gespeichert werden.
+			\item Ist die Einzige die einen Überblick über Datenerfassung hat
+		\end{itemize}}
+	\note[item]{Contra
+		\begin{itemize}
+			\item Hatte nicht genug Ressourcen
+			      \begin{itemize}
+				      \item Vielleicht zu sehr mit anderen Dingen beschäftigt.
+				      \item Walter hätte eingreifen können. Sollte sich ein Bild davon machen.
+			      \end{itemize}
+		\end{itemize}
+	}
+
+	\Large
+	Welche Verantwortung hatte Kathleen, die Datenerfassung zu hinterfragen, nachdem die Daten so lange nicht benutzt wurden?
+
+	\includegraphics[width=0.425\textwidth]{images/discussion.png}
+\end{frame}
+
+% Frage: Datenschutzaudit einsehbar
 
 \begin{frame}{Die Ultimative Slot Machine}
 	\centering
 
 	\note[item] {Pro \begin{itemize}
-			\item Sollte das komisch finden, dass Daten so lange gespeichert werden.
-			\item Ist die Einzige die einen Überblick über Datenerfassung hat
+			\item Daten sind öffentlich $\Rightarrow$ Kunden sind informierter
 		\end{itemize}}
 	\note[item]{Contra \begin{itemize}
-			\item Hatte nicht genug Ressourcen \begin{itemize}
-				      \item Vielleicht zu sehr mit anderen Dingen beschäftigt.
-				      \item Walter hätte eingreifen können. Sollte sich ein Bild davon machen.
-			      \end{itemize}
-		\end{itemize}}
+			\item Daten können in schlechte Hände gelangen.
+		\end{itemize}
+	}
 
 	\Large
-	Welche Verantwortung hatte Kathleen, die Datenerfassung zu hinterfragen, nachdem die Daten so lange nicht benutzt wurden?
+	Was haltet ihr davon, dass der Datenschutzaudit für Data Broker einsehbar war?
 
 	\includegraphics[width=0.425\textwidth]{images/discussion.png}
 \end{frame}

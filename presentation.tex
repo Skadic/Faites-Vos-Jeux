@@ -1,6 +1,6 @@
-% arara: lualatex: { synctex: yes, shell: yes } 
+% arara: xelatex: { synctex: yes, shell: yes } 
 % arara: biber if changed("bib")
-% arara: lualatex if changed("bib")
+% arara: xelatex if changed("bib")
 %
 
 % % -*- coding:utf-8 -*-
@@ -14,7 +14,7 @@
 \institute{TU Dortmund - Fakultät Informatik}
 \titlegraphic{\hfill\includegraphics[height=8mm]{tu-do-logo.pdf}}
 
-\includeonly{chapters/05_slotmachine}
+%\includeonly{chapters/06_hank}
 
 
 \begin{document}
@@ -37,12 +37,8 @@
 \include{chapters/03_angebot}
 \include{chapters/04_uebernahme}
 \include{chapters/05_slotmachine}
-
-\begin{frame}[t,standout]
-\Large
-Clever Last Words to Stimulate Discussion
-
-\end{frame}
+\include{chapters/06_hank}
+\include{chapters/07_loesung}
 
 \nocite{kees_faites_2017}
 \nocite{lee_ethical_2016}
