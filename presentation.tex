@@ -1,7 +1,7 @@
 % arara: lualatex: { synctex: yes, shell: yes } 
 % arara: biber if changed("bib")
 % arara: lualatex if changed("bib")
-%
+% 
 
 % % -*- coding:utf-8 -*-
 \documentclass[aspectratio=169,10pt, notes]{beamer}
@@ -25,8 +25,12 @@
     \tableofcontents
 \end{frame}
 
-\section{Faites Vos Jeux \cite{kees_faites_2017}}
 
+\section{Einleitung}
+
+\include{chapters/001_einleitung}
+
+\section{Faites Vos Jeux \cite{kees_faites_2017}}
 
 \note{\begin{itemize}
     \item Fallbeispiel aus Informatik Spektrum 2017
@@ -42,7 +46,7 @@
 
 \section{International Data Privacy Principles \cite{zankl_international_2014}}
 
-\include{chapters/08_international}
+\include{chapters/11_international}
 
 \nocite{mifune}
 
