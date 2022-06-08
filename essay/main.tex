@@ -1,0 +1,36 @@
+% arara: lualatex: { synctex: yes, shell: yes } 
+% arara: biber 
+% arara: lualatex 
+% if changed(toFile("ethik.bib")) || missing(toFile("ethik.bib"))
+
+% LTeX: language=de-DE
+
+% % -*- coding:utf-8 -*-
+\documentclass[11pt]{scrartcl}
+\input{preamble}
+
+\title{Faites Vos Jeux}
+\subtitle{So viele Daten sind das ja nicht... oder?}
+\author{Etienne Palanga}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\include{chapters/001_einleitung}
+
+\section{Faites Vos Jeux}
+
+\section{International Data Privacy Principles}
+
+\section{Literatur}
+\nocite{mifune_irasutoya_nodate}
+
+\printbibliography[heading=none]
+
+
+\end{document}
