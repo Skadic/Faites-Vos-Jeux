@@ -1,15 +1,39 @@
 \nonstopmode
 
 % Basic Packages
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
+%\usepackage[utf8]{inputenc}
+%\usepackage[T1]{fontenc}
 \usepackage[ngerman]{babel}
 
+% Geometry
+\usepackage[a4paper,
+            bindingoffset=0.2in,
+            left=1.5in,
+            right=1.5in,
+            top=1in,
+            bottom=1in,
+            footskip=.3in]{geometry}
+            
 % Textstuff
 \usepackage{csquotes}
 \usepackage{url}
 \usepackage{hyperref}
-\usepackage{cleveref}
+\usepackage{lmodern}            % Provides the Latin Modern Font which offers more glyphs than the default Computer Modern
+\usepackage[nameinlink]{cleveref}
+\crefname{figure}{Abbildung}{Abbildung}
+\crefname{subfigure}{Abbildung}{Abbildung}
+\crefname{table}{Tabelle}{Tabelle}
+\crefname{listing}{Quelltext}{Quelltext}
+\crefname{chapter}{Kapitel}{Kapitel}
+\crefname{section}{Abschnitt}{Abschnitt}
+\crefname{subsection}{Abschnitt}{Abschnitt}
+\crefname{subsubsection}{Abschnitt}{Abschnitt}
+\crefname{beispiel}{Beispiel}{Beispiel}
+\crefname{lemma}{Lemma}{Lemma}
+
+% Set Paragraph Skip
+\setlength{\parskip}{0.5\baselineskip}%
+\setlength{\parindent}{0pt}%
 
 % gfx
 \usepackage{pgfpages}
@@ -17,6 +41,9 @@
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{color}
+\usepackage{wrapfig}
+
+% Tikz
 \usepackage{tikz}
 \usetikzlibrary{positioning,calc}
 
