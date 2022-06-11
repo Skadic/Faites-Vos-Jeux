@@ -10,13 +10,13 @@ während Letzteres das Fundament für die Diskussion der Hauptthematik des Fallb
 \begin{wrapfigure}{r}{0.4\textwidth}
     \centering
     \begin{tikzpicture}[text node/.style={font=\sffamily\small}]
-        \node (law) {\includegraphics[width=0.25\textwidth]{images/book_law}};
+        \node (law) {\includegraphics[width=0.23\textwidth]{images/book_law}};
         \node[text node, below = 0cm of law] (law-name) {Gesetz};
-        \node[below = 3cm of law-name] (ethics) {\includegraphics[width=0.25\textwidth]{images/trolley_problem}};
+        \node[below = 3cm of law-name] (ethics) {\includegraphics[width=0.23\textwidth]{images/trolley_problem}};
         \node[text node, below = 0cm of ethics] (ethics-name) {Ethik};
 
-        \draw[-stealth, blue] (law) to[out = 300, in = 60, edge node={node[above left, text node] {\small Kann durchsetzen}}] (ethics);
-        \draw[-stealth, red] (ethics) to[out = 120, in = 240, edge node={node[below right, text node] {\small Gibt Kontext}}] (law);
+        \draw[-stealth, blue] ([xshift=1.5cm]law.south) to[edge node={node[above left, text node] {\small Kann durchsetzen}}] ([xshift=1.5cm]ethics.north);
+        \draw[-stealth, red] ([xshift=-1.5cm]ethics.north) to[edge node={node[below right, text node] {\small Gibt Kontext}}] ([xshift=-1.5cm]law.south);
     \end{tikzpicture}
     \caption{Wechselwirkung von Gesetz und Ethik.}
     \label{fig:02:lawethics}
@@ -79,7 +79,7 @@ Soll im Fall von Privatsphäre beispielsweise eine andere Person das eigene Tage
 so muss das Vertrauen in diese andere Person herrschen, dass diese nicht selbst unerlaubt in dem Tagebuch liest.
 Im Allgemeinen muss man Anderen vertrauen können, sollte man diesen Zugriff auf einen privaten Bereich geben. 
 
-Im Falle Sicherheit muss zum Beispiel ein Bodyguard nah bei der zu beschützenden Person bleiben.
+Im Falle Sicherheit muss beispielsweise ein Bodyguard in der Nähe der zu schützenden Person bleiben.
 Dabei muss natürlich das Vertrauen herrschen, dass der Bodyguard selbst keine schlechten Absichten hat.
 Allgemeiner, muss einem \enquote{Anbieter} von Sicherheit vertraut werden, dass dieser seine Arbeit gut und gewissenhaft tut.
 
@@ -150,4 +150,3 @@ Auch aus diesem Zitat sehen wir, dass die Themen Vertrauen, Privatsphäre und Si
 Obwohl die genaue Wahrnehmung von Privatsphäre sich etwas von Kultur zu Kultur unterscheiden mag,
 gibt es einen groben Konsens, dass Privatsphäre ein wichtiges, sozial vorteilhaftes Gut ist.\cite{lee_ethical_2016}
 
-Zum Thema Datenschutz betrachten wir nun das Fallbeispiel \enquote{Faites Vos Jeux}\cite{kees_faites_2017} aus dem Informatik Spektrum 2017.
