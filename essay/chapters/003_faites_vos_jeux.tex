@@ -1,0 +1,130 @@
+\section{Faites Vos Jeux}
+
+Zum Thema Datenschutz betrachten wir nun das Fallbeispiel \enquote{Faites Vos Jeux}\cite{kees_faites_2017} aus dem Informatik Spektrum 2017.
+
+\subsection{AC-Games in Not}
+
+\begin{wrapfigure}{r}{0.5\textwidth}
+    
+  \begin{tikzpicture}[text node/.style={font=\sffamily\small}]
+
+    \node (walter) {\includegraphics[width=0.15\textwidth]{images/walter.png}};
+    \node[text node, below=0mm of walter] (walter-name) {Walter};
+    
+    \node[below=2cm of walter] (acgames) {\includegraphics[width=0.15\textwidth]{images/ac_games.png}};
+    \node[text node, below=0cm of acgames] (acgames-name) {AC-Games};
+    
+    \node[left=2.1cm of acgames] (nutzer) {\includegraphics[width=0.15\textwidth]{images/game_friends.png}};
+    \node[text node, below=0cm of nutzer] (nutzer-name) {Nutzer:innen};
+    
+    
+    \draw[-stealth] (walter-name) -- node[text node, left] (ceo) {CEO}  (acgames);
+    
+    % Finanzkrise 2
+    
+    \draw[-stealth, red] (nutzer) -- node[text node, below] (geld) {Geld} (acgames);
+    
+    \node[above=1cm of geld] (finanzkrise) {\includegraphics[width=0.10\textwidth]{images/money_down.png}};
+    \node[text node, below=0cm of finanzkrise] (finanzkrise-name) {Finanzkrise};
+    \draw[dotted, red] (finanzkrise-name) -- (geld);
+    
+    % App Stores machen obsolet 3
+    
+    \node[below=0.3cm of geld] (apps) {\includegraphics[width=0.08\textwidth]{images/smartphone.png}};
+    \node[text node, below=0cm of apps] (apps-name) {App-Stores};
+    \draw[dotted, red] (apps) -- (geld);
+    
+  \end{tikzpicture} 
+  \caption{Die Situation von AC-Games.}
+  \label{fig:03:acgamessituation}
+\end{wrapfigure}
+
+Walter ist seit nun fast 2 Jahrzehnten Geschäftsführer einer kleinen Spielfirma namens AC-Games, 
+die ein kostenloses Spieleportal für Online-Spiele betreibt. (siehe \cref{fig:03:acgamessituation})
+Lange Zeit lief das Geschäft gut, die Firma hatte einen gesunden Stamm von Nutzern und Nutzerinnen.
+Die Einnahmen setzten sich aus Käufen virtueller Gegenstände, sowie Werbeeinnahmen zusammen.
+Allein durch die 100 meist-zahlenden Nutzern und Nutzerinnen konnte AC-Games seine Kosten decken.
+
+Doch dann begann vor etwa 10 Jahren die Wirtschaftskrise. 
+Seitdem ging es mit AC-Games langsam bergab.
+Dies war allerdings nicht allein der Wirtschaftskrise geschuldet.
+Weitere Entwicklungen über die letzten 10 Jahre wirkten sich ebenfalls negativ auf AC-Games aus.
+
+Beispielsweise wurden durch die Ausbreitung von Smartphones auch die damit einhergehenden App-Stores zum Problem für AC-Games.
+Vor allem für Gelegenheitsspieler eignen sich Spiele aus solchen App-Stores 
+und löst damit einen wichtigen Teil von Spieleportalen ab.
+Darüber hinaus führte die Popularität von App-Stores dazu,
+dass Spielentwickler weniger dazu geneigt waren, Spiele für Spieleportale zu entwickeln, im Vergleich zu App-Stores.
+Darüber hinaus sanken auch sowohl die Werbeeinnahmen, sowie die Zahl der Käufe virtueller Gegenstände
+und seit etwa 2-3 Jahren hat AC-Games Schwierigkeiten die eigenen Mitarbeiter und Mitarbeiterinnen zu bezahlen.
+
+\subsection{Das Angebot}
+
+Zu diesem Zeitpunkt bekommt Walter ein Angebot:
+Ein Datenhändler namens \emph{Data Broker GmbH} möchte die Firma übernehmen und bietet eine sehr große Geldsumme.
+Die hohe Geldsumme verwunderte die Mitglieder von AC-Games,
+doch nach einer Diskussion entschließt sich Walter, die Firma an Data Broker zu übergeben.
+Der Hauptgrund für diese Entscheidung, ist Walters Ansicht, dass AC-Games nur für Transaktionen nötige Daten speichert.
+Es sei unproblematisch, diese Daten an Data Broker zu übergeben.
+
+Doch tatsächlich speicherte AC-Games mehr Daten als von Walter angenommen.
+Hierzu müssen wir an den Anfang von AC-Games zurückgehen.
+Zu dieser Zeit war es Walter und seinen Mitgründern nicht sehr wichtig, auf Datenschutz zu achten.
+
+In einem alten Blogpost stellt Walter seine Gedanken über eine sogenannte \emph{ultimative Slot-Machine} dar.
+Diese soll ein Glücksspiel sein, das sich den Spielern und Spielerinnen anpasst.
+Dazu müssten natürlich Verhaltensdaten gesammelt werden.
+Darüber hinaus wurden weiter Überlegungen angestellt, wozu solche Daten noch dienen könnten.
+Dies wurde aber ausschließlich intern besprochen.
+Beispielsweise könne man Spielern künstlichem Stress aussetzen, um ihr Entscheidungsverhalten zu ihren Ungunsten zu beeinflussen.
+Diese Ideen wurden allerdings wieder verworfen, inklusive der ultimativen Slot-Machine.
+
+Allerdings wurden die angesprochenen Verhaltensdaten tatsächlich von AC-Games gesammelt und auch bis heute gespeichert.
+Eine Mitarbeiterin namens Kathleen war die einzige, die einen Überblick darüber hatte, welche Daten nun tatsächlich gesammelt und gespeichert wurden.
+Doch konnte sie mangels Ressourcen die Systeme nicht umprogrammieren, um die Datensammlung zu beenden.
+
+Es wurde auch in einem Datenschutzaudit angemerkt, dass die Menge der gesammelten Daten eigenartig sei.
+Allerdings wurde diesbezüglich nichts unternommen, da dies rechtlich legitim schien
+und die Nutzer und Nutzerinnen in AGB eingewilligt haben, die diese Datensammlung erlauben.
+
+Tatsächlich hat dieser Datenschutzaudit Data Broker erst auf AC-Games aufmerksam gemacht, da dieser öffentlich zugänglich war.
+Im Idealfall für Data Broker müssten auch nicht die AGB geändert werden, 
+sodass die Übernahme sogar ohne das Mitwissen der Nutzer und Nutzerinnen geschehen kann. 
+
+\subsection{Der Wert der Daten}
+
+\begin{wraptable}{l}{0.5\textwidth}
+   \begin{tabular}{c|lll} 
+        \textbf{Typ} & \textbf{Nutzer} \\\hline
+        Stress & Bob L. & Lina M. & \dots \\\hline
+        Neugier & Katie A. & Chris O. & \dots \\ \vdots & \dots & & 
+    \end{tabular} 
+    \caption{Hanks Kategorisierung der Nutzer und Nutzerinnen.}
+    \label{tab:03:categories}
+\end{wraptable}
+
+Hank ist ein neuer Mitarbeiter bei AC-Games und der Datenbankadmin.
+Auch er weiß von der Übernahme durch Data Broker und ist über die hohe Geldsumme verwundert.
+Er schließt dadurch, dass die Daten von AC-Games nicht wertlos sind.
+Da er von Walters alten Blog—Posts weiß und er nicht die Absicht hat, lange bei AC-Games zu bleiben,
+ist er bereit etwas zu experimentieren.
+
+Er stellt Berechnungen auf den Daten an und kategorisiert so die Nutzer und Nutzerinnen in verschiedene Gruppen. (siehe \cref{tab:03:categories})
+Mithilfe dieser Daten fügt er dem In-Game Shop ein neues Element hinzu.
+Er fügt einen Zähler hinzu, der die verbleibende Anzahl jedes Produkts darstellen soll.
+Die angezeigte Zahl ist aber unecht.
+
+Er passt die genaue Darstellung dieses Zählers auf die Nutzer und Nutzerinnen der Kategorien an,
+die er mithilfe der Berechnungen erstellt hat.
+So wird für \enquote{Stress-Typen} der Zähler zu Anfang auf eine zweistellige Zahl gesetzt und diese Zahl langsam dekrementiert.
+Bei \enquote{Neugier-Typen} hingegen wird stattdessen ein \enquote{Vorrat prüfen}-Knopf angezeigt.
+Wird dieser geklickt, wird ein Fenster mit dem Text \enquote{Nur noch ein Exemplar verfügbar!} angezeigt.
+
+Am nächsten Tag prüft Hank die Verkaufszahlen und bemerkt, dass sich diese signifikant erhöht haben.
+Er fragt sich, was noch mit diesen Daten angestellt werden könnte und überlegt, was er in dieser Situation tun sollte.
+Er hat zwar Anweisungen bekommen, nicht tief in die Datenbank einzugreifen,
+doch spielt er mit dem Gedanken, entgegen dieser Anweisungen zu handeln.
+Auch entscheidet er sich dagegen, Walter von den Daten zu erzählen.
+
+Schließlich entscheidet er sich, entgegen seinen Anweisungen, die Datenbank zu modifizieren.
+Er pseudonymisiert die Nutzer-IDs und speichert eine Zuordnungstabelle auf seinem USB-Stick. 
