@@ -1,7 +1,11 @@
-% arara: lualatex: { synctex: yes, shell: yes } 
-% arara: biber 
-% arara: lualatex 
-% if changed(toFile("ethik.bib")) || missing(toFile("ethik.bib"))
+% arara: lualatex: { synctex: yes, shell: yes }
+% arara: biber if
+% arara: --> bib = toFile("ethik.bib");
+% arara: --> return changed(bib) || missing(bib);
+% arara: lualatex: { synctex: yes, shell: yes } if
+% arara: --> bib = toFile("ethik.bib");
+% arara: --> return changed(bib) || missing(bib);
+
 
 % LTeX: language=de-DE
 
@@ -25,8 +29,9 @@
 \input{chapters/001_einleitung}
 \newpage
 \input{chapters/002_grundlagen}
-\input{chapters/003_faites_vos_jeux}
 \input{chapters/004_ethische_grundlagen}
+\newpage
+\input{chapters/003_faites_vos_jeux}
 \input{chapters/005_ethische_evaluation}
 
 \newpage
